@@ -1,5 +1,14 @@
 const fs = require('node:fs');
 let html = fs.readFileSync('dist/index.html', 'utf8');
+html = html.replace('Sua CNH e os débitos do seu veículo merecem atenção. Conte com o Rafa para entender o que fazer e seguir em frente.', 'Sua CNH e os débitos do seu veículo merecem atenção. Conte com nossa equipe para entender o que fazer e seguir em frente.');
+html = html.replace('Escolha o que precisa resolver.<br>Fale com o Rafa e entenda os próximos passos.', 'Escolha o que precisa resolver.<br>Fale com nossa equipe e entenda os próximos passos.');
+html = html.replace('Você conta.<br>O Rafa <em>orienta.</em>', 'Você conta.<br>Nossa equipe <em>orienta.</em>');
+html = html.replace('Veja as avaliações do Rafa Despachante no Google.', 'Veja as avaliações do nosso atendimento no Google.');
+html = html.replace('Seu caminho<br>passa pelo <em>Rafa.</em>', 'Seu caminho<br>passa por um <em>bom atendimento.</em>');
+html = html.replace('Já foi atendido pelo Rafa? Compartilhe sua experiência no perfil da empresa.', 'Já foi atendido pela equipe? Compartilhe sua experiência no perfil da empresa.');
+html = html.replace('CONTE COM O RAFA', 'CONTE COM A EQUIPE');
+html = html.replace('Fale com o Rafa', 'Fale com a equipe');
+html = html.replace('Orientação para sua CNH e seu veículo, com atendimento em Mauá.', 'Orientação para sua CNH e seu veículo, com atendimento próximo em Mauá.');
 html = html.replace('Ver avaliações reais no Google', 'Ver avaliações do Google');
 html = html.replace(/<div class="floating-note">[\s\S]*?<\/div><span class="art-bottom">/, '<span class="art-bottom">');
 html = html.replace(/<div class="ticker"[\s\S]*?<\/div>/, '<div class="ticker" aria-hidden="true"><div>CNH <span>✳</span> DÉBITOS DE VEÍCULOS <span>✳</span> ATENDIMENTO EM MAUÁ <span>✳</span> DOCUMENTAÇÃO <span>✳</span> CNH <span>✳</span> DÉBITOS DE VEÍCULOS <span>✳</span> ATENDIMENTO EM MAUÁ <span>✳</span> DOCUMENTAÇÃO <span>✳</span></div></div>');
